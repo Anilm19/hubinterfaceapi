@@ -1,0 +1,4 @@
+﻿
+dotnet ef migrations add InitialCreate --startup-project HubService.Api --project HubService.Data -v --context ApplicationDbContext
+dotnet ef database update --startup-project HubService.Api --project HubService.Data -v --context ApplicationDbContext
+
