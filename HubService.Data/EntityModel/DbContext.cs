@@ -1,6 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
-using static Org.BouncyCastle.Crypto.Engines.SM2Engine;
 
 namespace HubService.Data.EntityModel
 {
@@ -10,6 +8,7 @@ namespace HubService.Data.EntityModel
         {
         }
         public DbSet<Facility> Facility { get; set; }
+        public DbSet<User> User { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -46,5 +46,12 @@ namespace HubService.Api.Controllers.Base
             Service.Delete(id);
             return Ok();
         }
+
+        [HttpGet("getList")]
+        public virtual IActionResult GetList(int pageNumber,int pageSize)
+        {
+            Service.GetList(pageNumber, pageSize,"","");
+            return Ok();
+        }
     }
 }

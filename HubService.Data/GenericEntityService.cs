@@ -39,6 +39,12 @@ namespace HubService.Data
             _dbContext.SaveChanges();
             return entity;
         }
+
+        public IEnumerable<T> GetList(int pageNumber, int pageSize, string sort, string direction)
+        {
+            return _dbContext.Set<T>().Skip(pageNumber).Take(pageSize).ToList();
+
+        }
     }
 }
 

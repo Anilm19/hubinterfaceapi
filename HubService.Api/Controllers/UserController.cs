@@ -7,9 +7,9 @@ namespace HubService.Api.Controllers
 {
     [Route("[controller]")]
     [ApiController]
-    public class FacilityController : DataApiBaseController<Facility, FacilityService>
+    public class UserController : DataApiBaseController<User, UserService>
     {
-        public FacilityController(FacilityService service, ILogger<FacilityController> logger) : base(service, logger)
+        public UserController(UserService service, ILogger<UserController> logger) : base(service, logger)
         {
         }
         

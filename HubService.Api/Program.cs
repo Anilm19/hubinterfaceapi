@@ -26,6 +26,7 @@ public class Program
         builder.Services.AddSwaggerGen();
        
         builder.Services.AddScoped<FacilityService>();
+        builder.Services.AddScoped<UserService>();
         builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseMySQL(builder.Configuration.GetConnectionString("Default")));
         LogManager.Setup().LoadConfigurationFromSection(builder.Configuration).GetCurrentClassLogger();
         var app = builder.Build();
